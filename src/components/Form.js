@@ -1,7 +1,7 @@
-import React,{useEffect} from 'react'
+import React,{useEffect, useState} from 'react'
 
 const Form = () => {
-    const [value, setValue] = React.useState('select');
+    const [value, setValue] = useState('select');
 
     const handleChange = (event) => {
       setValue(event.target.value);
@@ -16,7 +16,7 @@ const Form = () => {
         <label>
           Select an option<br/>
           <select value={value} className="form-control" onChange={handleChange}>
-            <option >--select--</option>
+            <option value="select">--select--</option>
             <option value="Head">Head</option>
             <option value="Tail">Tail</option>
           </select>
